@@ -8,7 +8,15 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     predictions = predictor.get_forecast().tolist()
-    return jsonify({'predictions': predictions})
+    probabilities = predictor.get_probability().tolist()
+    policy_id = predictor.policy_id.tolist()
+    return jsonify(
+        {
+            'policy_id': policy_id,
+            'predictions': predictions,
+            'probabilities': probabilities
+        }
+    )
 
 
 if __name__ == '__main__':
