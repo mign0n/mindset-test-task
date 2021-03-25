@@ -2,8 +2,7 @@ from catboost import CatBoostClassifier, Pool
 import numpy as np
 import pandas as pd
 
-MODEL_PATH = 'mlmodel/catboost_model'
-DATA_PATH = 'data/data_to_predict.csv'
+from webapp.settings import DATA_PATH, MODEL_PATH
 
 
 class Predictor:

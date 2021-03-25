@@ -1,8 +1,7 @@
-from flask import Flask, jsonify
+from flask import jsonify
 
-from models import predictor
-
-app = Flask(__name__)
+from webapp.models import predictor
+from webapp import app
 
 
 @app.route('/')
@@ -17,7 +16,3 @@ def index():
             'probabilities': probabilities
         }
     )
-
-
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000, debug=True)
