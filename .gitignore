@@ -130,6 +130,3 @@ dmypy.json
 
 # IDE config
 .idea/
-
-# Secret settings
-settings.py

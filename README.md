@@ -1,4 +1,5 @@
 # Forecasting customer churn
+
 ## Intro  
 This is a web service that allows you to predict the probability of outflow of
 insurance company customers.  
@@ -37,3 +38,22 @@ The service is based on a pre-trained [CatBoost](https://catboost.ai/) classifie
 ```shell
 (env) ~/mindset/mindset-test-task$ ./run.sh
 ```
+6. Go to http://127.0.0.1:5000
+
+## Steps to run server in Docker container
+1. Open a terminal, create a directory and navigate to it.  
+```shell
+~$ mkdir mindset && cd mindset
+```
+2. Clone the repository and navigate to `mindset-test-task` directory.  
+```shell
+~/mindset$ git clone https://github.com/mign0n/mindset-test-task.git
+```
+```shell
+~/mindset$ cd mindset-test-task
+```
+3. Run script `run-docker`.
+```shell
+~/mindset/mindset-test-task$ bash ./run-docker.sh
+```
+4. Go to http://127.0.0.1:5000
